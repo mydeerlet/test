@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.mydeerlet.myapplication.TitleFragment"
+        android:label="@string/title_nav_message"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_quesitionFragment"
+            app:destination="@id/quesitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quesitionFragment"
+        android:name="com.mydeerlet.myapplication.QuesitionFragment"
+        android:label="@string/question_nav_message"
+        tools:layout="@layout/fragment_quesition" >
+        <action
+            android:id="@+id/action_quesitionFragment_to_winFragment"
+            app:destination="@id/winFragment" />
+        <action
+            android:id="@+id/action_quesitionFragment_to_loseFragment"
+            app:destination="@id/loseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment"
+        android:name="com.mydeerlet.myapplication.WinFragment"
+        android:label="@string/win_nav_message"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loseFragment"
+        android:name="com.mydeerlet.myapplication.LoseFragment"
+        android:label="@string/lose_nav_message"
+        tools:layout="@layout/fragment_lose" >
+        <action
+            android:id="@+id/action_loseFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+</navigation>
