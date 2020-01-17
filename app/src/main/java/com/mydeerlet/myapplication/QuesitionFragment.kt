@@ -29,10 +29,6 @@ class QuesitionFragment : Fragment() {
 
         val myViewModel = ViewModelProviders.of(requireActivity(),SavedStateViewModelFactory(activity!!.application ,this))
             .get(MyViewModel::class.java)
-
-
-//        SavedStateViewModelFactory(requireActivity()
-
         myViewModel.generator()
 
 

@@ -20,5 +20,9 @@
     <string name="question_nav_message">测试</string>
     <string name="win_nav_message">胜利</string>
     <string name="lose_nav_message">失败</string>
+    <string name="one_level">一级</string>
+    <string name="two_level">二级</string>
+    <string name="three_level">三级</string>
+    <string name="level_Four">四级</string>
 
 </resources>

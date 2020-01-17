@@ -41,6 +41,9 @@
     <string name="question_nav_message">Testing</string>
     <string name="win_nav_message">Win</string>
     <string name="lose_nav_message">Lose</string>
-
+    <string name="one_level">one-level</string>
+    <string name="two_level">two-level</string>
+    <string name="three_level">three-level</string>
+    <string name="level_Four">level-Four</string>
 
 </resources>

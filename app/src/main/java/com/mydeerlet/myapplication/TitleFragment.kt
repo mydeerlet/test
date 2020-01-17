@@ -35,10 +35,32 @@ class TitleFragment : Fragment() {
 
         binding.date = myViewModel
         binding.lifecycleOwner = requireActivity()
-        binding.button2.setOnClickListener {
+
+
+        val clicklistener = View.OnClickListener {
+
             val controller = Navigation.findNavController(it)
+
+            when (it.id) {
+                R.id.button1 -> {
+                    myViewModel.LEVL = 10
+                }
+                R.id.button2 -> {
+                    myViewModel.LEVL = 20
+                }
+                R.id.button3 -> {
+                    myViewModel.LEVL = 50
+                }
+                R.id.button4 -> {
+                    myViewModel.LEVL = 100
+                }
+            }
             controller.navigate(R.id.action_titleFragment_to_quesitionFragment)
         }
+        binding.button1.setOnClickListener(clicklistener)
+        binding.button2.setOnClickListener(clicklistener)
+        binding.button3.setOnClickListener(clicklistener)
+        binding.button4.setOnClickListener(clicklistener)
         return binding.root
     }
 

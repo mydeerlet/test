@@ -24,6 +24,7 @@ class MyViewModel(application: Application, handle: SavedStateHandle) : AndroidV
     val KEY_CURRENT_SCORE = "key_current_score"
 
     var win_flag = false
+    var LEVL = 20
 
     init {
         if (!handle.contains(KEY_HIGH_SCORE)) {
@@ -63,7 +64,7 @@ class MyViewModel(application: Application, handle: SavedStateHandle) : AndroidV
     }
 
     fun generator(){
-        val LEVL = 20
+
         val random = Random()
 
         val x = random.nextInt(LEVL)+1
