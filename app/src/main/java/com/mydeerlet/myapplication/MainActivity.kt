@@ -40,7 +40,11 @@ class MainActivity : AppCompatActivity() {
             val dialog = builder.create()
             dialog.show()
         }else{
-            controller.navigate(R.id.titleFragment)
+            if (controller.currentDestination!!.id == R.id.loseFragment|| controller.currentDestination!!.id == R.id.winFragment){
+                controller.navigate(R.id.titleFragment)
+            }else{
+                finish()
+            }
         }
         return super.onSupportNavigateUp()
     }
